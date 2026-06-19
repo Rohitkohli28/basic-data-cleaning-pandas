@@ -1,36 +1,184 @@
 # Datasets-shoping-app
-# Basic Data Exploration and Cleaning using Pandas
+# 📊 Basic Data Exploration and Cleaning using Pandas
 
-## Objective
+## 🚀 Project Overview
 
-Perform data exploration and cleaning on an Ecommerce dataset using Pandas.
+This project demonstrates the fundamentals of **Data Exploration** and **Data Cleaning** using **Python Pandas** on an Ecommerce Dataset. The dataset contains information about products, pricing, ratings, customer reviews, seller details, and more.
 
-## Steps Performed
+The goal of this project is to understand the dataset, clean the data, and prepare it for further analysis.
 
-1. Loaded the dataset using Pandas.
-2. Explored data using:
+---
 
-   * head()
-   * shape
-   * columns
-3. Checked missing values.
-4. Removed duplicate records.
-5. Created a derived column named `price_difference`.
-6. Saved the cleaned dataset as `cleaned_dataset.csv`.
+## 🎯 Objectives
 
-## Dataset Information
+✅ Load a CSV dataset into a Pandas DataFrame
 
-* Rows: 1000
-* Columns: 24
+✅ Explore the dataset structure
 
-## Output Files
+✅ Check and handle missing values
 
-* Basic_Data_Cleaning.ipynb
-* cleaned_dataset.csv
-* README.md
+✅ Remove duplicate records
 
-## Tools Used
+✅ Create a derived feature
 
-* Python
-* Pandas
-* Jupyter Notebook
+✅ Generate summary statistics
+
+✅ Export the cleaned dataset
+
+---
+
+## 📁 Dataset Information
+
+| Attribute      | Value                                         |
+| -------------- | --------------------------------------------- |
+| Dataset Name   | Ecommerce Dataset (Products & Sizes Included) |
+| Total Records  | 1000                                          |
+| Total Features | 24                                            |
+| Source         | Kaggle                                        |
+
+---
+
+## 🛠️ Technologies Used
+
+* 🐍 Python 3
+* 🐼 Pandas
+* 📓 Jupyter Notebook
+* 🌐 GitHub
+
+---
+
+## 📌 Steps Performed
+
+### 1️⃣ Data Loading
+
+Loaded the dataset using Pandas:
+
+```python
+import pandas as pd
+
+df = pd.read_csv("Combined_dataset.csv")
+```
+
+---
+
+### 2️⃣ Data Exploration
+
+Explored dataset using:
+
+* `head()`
+* `tail()`
+* `shape`
+* `columns`
+* `dtypes`
+
+---
+
+### 3️⃣ Missing Value Analysis
+
+Checked missing values in each column:
+
+```python
+df.isnull().sum()
+```
+
+---
+
+### 4️⃣ Data Cleaning
+
+Removed duplicate records:
+
+```python
+df.drop_duplicates(inplace=True)
+```
+
+---
+
+### 5️⃣ Feature Engineering
+
+Created a derived column:
+
+```python
+df["price_difference"] = df["initial_price"] - df["final_price"]
+```
+
+---
+
+### 6️⃣ Statistical Summary
+
+Generated descriptive statistics:
+
+```python
+df.describe()
+```
+
+---
+
+### 7️⃣ Export Cleaned Dataset
+
+Saved the cleaned dataset:
+
+```python
+df.to_csv("cleaned_dataset.csv", index=False)
+```
+
+---
+
+## 📈 Sample Dataset Information
+
+```text
+Dataset Shape: (1000, 24)
+```
+
+### Sample Columns
+
+* product_id
+* title
+* product_description
+* rating
+* ratings_count
+* initial_price
+* final_price
+* seller_name
+* category
+
+and many more...
+
+---
+
+## 📂 Project Structure
+
+```text
+basic-data-cleaning-pandas/
+│
+├── Basic_Data_Cleaning.ipynb
+├── cleaned_dataset.csv
+├── README.md
+└── Combined_dataset.csv
+```
+
+---
+
+## ✨ Key Learnings
+
+🔹 Data Loading with Pandas
+
+🔹 Data Exploration Techniques
+
+🔹 Missing Value Detection
+
+🔹 Duplicate Removal
+
+🔹 Feature Engineering
+
+🔹 Data Exporting
+
+🔹 GitHub Project Management
+
+---
+
+## 🎉 Conclusion
+
+This project successfully demonstrates the basic workflow of data preprocessing and cleaning using Pandas. The cleaned dataset can be used for further analysis, visualization, and machine learning applications.
+
+⭐ If you found this project useful, feel free to star the repository!
+
